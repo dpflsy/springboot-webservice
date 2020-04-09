@@ -28,5 +28,14 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     //롬복 추가
     compile('org.projectlombok:lombok')
+    //롬복 테스트를 위한 dependencies
+    testCompile('org.projectlombok:lombok')
+    annotationProcessor('org.projectlombok:lombok')
+    testAnnotationProcessor('org.projectlombok:lombok')
+    //jpa 추가
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    //h2 : 인메모리 관계형 데이터베이스, 메모리에서 실행 -> 어플리케이션 재시작 시 초기화(주로 테스트 용도)
+    compile('com.h2database:h2')
+    
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

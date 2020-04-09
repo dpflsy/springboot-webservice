@@ -22,26 +22,23 @@ public class HelloControllerTest {
     private MockMvc mvc; //웹 API를 테스트 , 스프링 MVC 테스트의 시작점
 
     @Test
-    public void Returnhello() throws Exception{
+    public void testReturnHello() throws Exception{
         String hello = "hello";
         mvc.perform(get("/hello")) // MockMvc를 통해 /hello 주소로 Get을 요청받음
             .andExpect(status().isOk()) //mvc.perform의 결과가 200인지 아닌지를 검증
             .andExpect(content().string(hello)); //결과 검증, 응답 본문의 내용이 맞는지 아닌지 검증
     }
-
     @Test
-    public void ReturnHelloDto() throws Exception{
+    public void testHelloDto() throws Exception{
         String name = "hello";
-        int amount = 10000;
+        int amount = 1000;
 
-        mvc.perform(
-                get("/hello/dto")
-                .param("name",name)
-                .param("amount",String.valueOf(amount)))
+        mvc.perform(get("/hello/dto")
+                .param("name", name)
+                .param("amount", String.valueOf(amount)))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$name",is(name))) //json 응답값을 필드별로 검증할 수 있는 메소드, $를 기준으로 필드명 명시
-                .andExpect(jsonPath("$.amount",is(amount)));
-
+                .andExpect(jsonPath("$.name", is(name)))
+                .andExpect(jsonPath("$.amount", is(amount)));
     }
 
 }
