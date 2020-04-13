@@ -1,6 +1,9 @@
 # springboot-webservice
 Spring boot를 이용한 간단한 웹서비스
 
+#### 개발환경
+_Intellij + Java 1.8 + Gradle + Spring Boot_
+
 ### 1. API
 1) 게시물 등록 
 2) 게시물 조회
