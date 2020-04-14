@@ -1,17 +1,16 @@
 package com.kyr.board.springboot.domain.posts;
 
+import com.kyr.board.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
-
 
 @Getter //lombok
 @NoArgsConstructor //lombok (기본 생성자를 자동으로 추가시킴) pulic Posts(){}와 같은 효과
 @Entity //JPA - 클래스와 링크될 클래스임을 나타낸다
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id //해당 테이블의 PK를 나타냄
     @GeneratedValue(strategy = GenerationType.IDENTITY) //PK의 생성규칙을 나타냄
     private Long id;
