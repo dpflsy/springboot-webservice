@@ -13,8 +13,8 @@ _Intellij + Java 1.8 + Gradle + Spring Boot_
 ### 2. 화면(머스테치)
 1) 머스테치 플러그인 설치 :heavy_check_mark:
 2) 기본 페이지 :heavy_check_mark:
-3) 게시물 등록화면
-4) 전체 조회
+3) 게시물 등록화면 :heavy_check_mark:
+4) 전체 조회 :heavy_check_mark:
 5) 게시물 수정 
 6) 게시물 삭제
 
