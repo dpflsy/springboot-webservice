@@ -14,7 +14,6 @@ public class PostsApiController {
     private final PostsService postsService;
 
     // post(게시물 등록)
-
     @PostMapping("/api/v1/posts")
     public Long save(@RequestBody PostsSaveRequestDto requestDto){
         return postsService.save(requestDto);
