@@ -37,6 +37,9 @@ dependencies {
 
     //h2 : 인메모리 관계형 데이터베이스, 메모리에서 실행 -> 어플리케이션 재시작 시 초기화(주로 테스트 용도)
     compile('com.h2database:h2')
+
+    // mustache 스타터 의존성
+    compile('org.springframework.boot:spring-boot-starter-mustache')
     
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
