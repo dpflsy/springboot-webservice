@@ -1,6 +1,5 @@
 package com.kyr.board.springboot.web;
 
-
 import com.kyr.board.springboot.service.PostsService;
 import com.kyr.board.springboot.web.dto.PostsResponseDto;
 import com.kyr.board.springboot.web.dto.PostsSaveRequestDto;
@@ -20,15 +19,22 @@ public class PostsApiController {
     }
 
     // put(게시물 수정)
-    @PutMapping("api/v1/posts/{id}")
+    @PutMapping("/api/v1/posts/{id}")
     public Long update(@PathVariable Long id, @RequestBody PostsUpdateRequestDto requestDto){
         return postsService.update(id, requestDto);
     }
-
     // get(게시물 조회)
-    @GetMapping("api/v1/posts/{id}")
+    @GetMapping("/api/v1/posts/{id}")
     public PostsResponseDto findById(@PathVariable Long id){
         return postsService.findById(id);
     }
+
+    //delete (게시물 삭제)
+    @DeleteMapping("/api/v1/posts/{id}")
+    public Long delete(@PathVariable Long id){
+        postsService.delete(id);
+        return id;
+    }
+
 
 }
