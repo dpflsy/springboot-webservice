@@ -15,8 +15,8 @@ _Intellij + Java 1.8 + Gradle + Spring Boot_
 2) 기본 페이지 :heavy_check_mark:
 3) 게시물 등록화면 :heavy_check_mark:
 4) 전체 조회 :heavy_check_mark:
-5) 게시물 수정 
-6) 게시물 삭제
+5) 게시물 수정 :heavy_check_mark:
+6) 게시물 삭제 :heavy_check_mark:
 
 ### 3. 스프링 시큐리티 적용
 1) 스프링 시큐리티 + Oauth2 클라이언트
