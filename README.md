@@ -19,8 +19,8 @@ _Intellij + Java 1.8 + Gradle + Spring Boot_
 6) 게시물 삭제 :heavy_check_mark:
 
 ### 3. 스프링 시큐리티 적용
-1) 스프링 시큐리티 + Oauth2 클라이언트
-2) 구글 로그인 연동
+1) 스프링 시큐리티 + Oauth2 클라이언트 :heavy_check_mark:
+2) 구글 로그인 연동 :heavy_check_mark:
 3) 네이버 로그인 연동
 
 
