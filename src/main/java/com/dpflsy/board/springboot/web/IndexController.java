@@ -1,5 +1,6 @@
 package com.dpflsy.board.springboot.web;
 
+import com.dpflsy.board.springboot.config.auth.LoginUser;
 import com.dpflsy.board.springboot.config.auth.dto.SessionUser;
 import com.dpflsy.board.springboot.domain.user.User;
 import com.dpflsy.board.springboot.service.PostsService;
@@ -21,10 +22,10 @@ public class IndexController {
     private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) { //! 기존에 사용했던 세션 정보값 개선
         model.addAttribute("posts", postsService.findAllDesc());
         //로그인 성공시 세션에 SessionUser를 저장
-        SessionUser user = (SessionUser) httpSession.getAttribute("user"); //로그인 성공 시 getAttribute에 값을 가져옴
+        //SessionUser user = (SessionUser) httpSession.getAttribute("user"); //로그인 성공 시 getAttribute에 값을 가져옴
 
         if(user != null){
             model.addAttribute("userName",user.getName()); //세션에 저장된 값이 있을때만 model에 userName으로 등록
